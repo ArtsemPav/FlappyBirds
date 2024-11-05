@@ -5,7 +5,8 @@ using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI scoreText1;
+    [SerializeField] private TextMeshProUGUI scoreText2;
     public static ScoreManager Instance { get; set; }
     private int score;
 
@@ -18,6 +19,7 @@ public class ScoreManager : MonoBehaviour
     public void SetScore (int score)
     {
         this.score += score;
-        scoreText.text = "Score: " + this.score.ToString();
+        scoreText1.text = "Score: " + this.score.ToString();
+        scoreText2.text = "Score: " + this.score.ToString();
     }
 }
