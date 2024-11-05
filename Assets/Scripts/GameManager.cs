@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         instance = this;
+        loseWindow.SetActive(false);
+        Time.timeScale = 1;
     }
     public void RestartScene()
     {
