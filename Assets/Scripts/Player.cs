@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0) || ((Input.touchCount > 0) && (Input.touches[0].phase == TouchPhase.Began)))
         {
             rb.velocity = new Vector2();
             rb.AddForce((Vector2)(transform.up * jumpForce), ForceMode2D.Impulse);
