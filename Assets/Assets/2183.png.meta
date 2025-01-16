@@ -189,10 +189,10 @@ TextureImporter:
       name: 2183_4
       rect:
         serializedVersion: 2
-        x: 358
-        y: 249
-        width: 11
-        height: 7
+        x: 365
+        y: 232
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,10 +210,10 @@ TextureImporter:
       name: 2183_5
       rect:
         serializedVersion: 2
-        x: 371
-        y: 249
-        width: 27
-        height: 7
+        x: 376
+        y: 198
+        width: 137
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,10 +231,10 @@ TextureImporter:
       name: 2183_6
       rect:
         serializedVersion: 2
-        x: 400
-        y: 249
-        width: 32
-        height: 7
+        x: 434
+        y: 97
+        width: 65
+        height: 72
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,10 +252,10 @@ TextureImporter:
       name: 2183_7
       rect:
         serializedVersion: 2
-        x: 434
-        y: 249
-        width: 19
-        height: 7
+        x: 364
+        y: 37
+        width: 142
+        height: 33
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -737,7 +737,7 @@ TextureImporter:
         serializedVersion: 2
         x: 146
         y: 61
-        width: 56
+        width: 96
         height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -748,27 +748,6 @@ TextureImporter:
       bones: []
       spriteID: ab9d831440b184b429efa1bfdf488e9e
       internalID: 1389979009
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 2183_32
-      rect:
-        serializedVersion: 2
-        x: 204
-        y: 64
-        width: 38
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ab1b7f58fd1f87c47b901dc0bacdc38f
-      internalID: -1567077811
       vertices: []
       indices: 
       edges: []
@@ -1340,6 +1319,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: 2183_3
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 105
+        width: 22
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0880184e5720fc44aa457f9fa3fe0af4
+      internalID: 426605349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2183_8
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 6
+        width: 145
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f35f63590eddf014290ebab79f9aa558
+      internalID: 889956760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1374,6 +1395,7 @@ TextureImporter:
       2183_27: 834813991
       2183_28: 1569540402
       2183_29: 1338171998
+      2183_3: 426605349
       2183_30: 1476064743
       2183_31: 1389979009
       2183_32: -1567077811
@@ -1407,6 +1429,7 @@ TextureImporter:
       2183_58: -61006103
       2183_6: 479230927
       2183_7: 1801398917
+      2183_8: 889956760
       BG: 843815161
       Ground: -181417832
       PipeBottom: 1862550092

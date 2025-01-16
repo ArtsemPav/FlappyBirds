@@ -17,6 +17,7 @@ public class Spawner : MonoBehaviour
             GameObject Pipe = Instantiate(spawnPrefab, transform.position, Quaternion.identity);
             float range = Random.Range(minYPosition, MaxYPosition);
             Pipe.transform.position = new Vector3(Pipe.transform.position.x, range, 0);
+            Destroy(Pipe, 15);
         }
         else
         {
