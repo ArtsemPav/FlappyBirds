@@ -123,27 +123,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BG
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 138
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a276695c40fbab3429f4384d5bec0af5
-      internalID: 843815161
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Ground
       rect:
         serializedVersion: 2
@@ -1361,6 +1340,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: BtnClose
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 132
+        width: 37
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b16abcc4376b4fe4984bb1ff6601d6a7
+      internalID: -2110822057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1431,6 +1431,7 @@ TextureImporter:
       2183_7: 1801398917
       2183_8: 889956760
       BG: 843815161
+      BtnClose: -2110822057
       Ground: -181417832
       PipeBottom: 1862550092
       PipeTop: 1892075284
