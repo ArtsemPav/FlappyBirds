@@ -9,6 +9,7 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreText2;
     public static ScoreManager Instance { get; set; }
     public int score;
+    public GameObject Sound;
 
     public void Start()
     {
@@ -21,5 +22,11 @@ public class ScoreManager : MonoBehaviour
         this.score += score;
         scoreText1.text = "Score: " + this.score.ToString();
         scoreText2.text = this.score.ToString();
+    }
+
+    public void PlaySound()
+    {
+        AudioSource sound = Sound.GetComponent<AudioSource>();
+        sound.Play();
     }
 }
