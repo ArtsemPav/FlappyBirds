@@ -10,6 +10,8 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager Instance { get; set; }
     public int score;
     public GameObject Sound;
+    public Spawner SpawnPrefab;
+    public MoveObject moveObject;
 
     public void Start()
     {
@@ -22,11 +24,21 @@ public class ScoreManager : MonoBehaviour
         this.score += score;
         scoreText1.text = "Score: " + this.score.ToString();
         scoreText2.text = this.score.ToString();
+        if ((this.score % 6 == 0) && (this.score != 0) && (SpawnPrefab.timeToSpawn > 0.2f))
+        {
+            IncreaseDifficoult();
+        }
     }
 
     public void PlaySound()
     {
         AudioSource sound = Sound.GetComponent<AudioSource>();
         sound.Play();
+    }
+
+    public void IncreaseDifficoult()
+    {
+        moveObject.speed = moveObject.speed + 0.4f;
+        SpawnPrefab.timeToSpawn = SpawnPrefab.timeToSpawn - 0.2f;
     }
 }
