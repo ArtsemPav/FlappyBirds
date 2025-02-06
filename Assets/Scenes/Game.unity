@@ -358,7 +358,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -852, y: 0}
+  m_AnchoredPosition: {x: -851.99994, y: 0}
   m_SizeDelta: {x: -1650, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &75309104
@@ -1217,6 +1217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loseWindow: {fileID: 274033166}
   HitSound: {fileID: 1506296805}
+  soundManager: {fileID: 828307347}
 --- !u!4 &318212599
 Transform:
   m_ObjectHideFlags: 0
@@ -1301,7 +1302,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c6c5685bf82df4f80f01e5702dc269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sounds: {fileID: 97736889}
+  BtnSoundsOff: {fileID: 0}
+  BtnSoundsOn: {fileID: 0}
 --- !u!114 &333216695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1346,34 +1348,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 333216694}
-        m_TargetAssemblyTypeName: SoundsOff, Assembly-CSharp
+      - m_Target: {fileID: 828307347}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: SoundSwitch
         m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 613604413}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 333216692}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2105,7 +2083,6 @@ GameObject:
   - component: {fileID: 613604418}
   - component: {fileID: 613604417}
   - component: {fileID: 613604416}
-  - component: {fileID: 613604415}
   m_Layer: 5
   m_Name: SoundOffBtn
   m_TagString: Untagged
@@ -2132,19 +2109,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &613604415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 613604413}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32c6c5685bf82df4f80f01e5702dc269, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Sounds: {fileID: 97736889}
 --- !u!114 &613604416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2189,8 +2153,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 613604415}
-        m_TargetAssemblyTypeName: SoundsOff, Assembly-CSharp
+      - m_Target: {fileID: 828307347}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: SoundSwitch
         m_Mode: 1
         m_Arguments:
@@ -2200,30 +2164,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 613604413}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 333216692}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &613604417
 MonoBehaviour:
@@ -2765,6 +2705,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
+--- !u!1 &828307346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 828307348}
+  - component: {fileID: 828307347}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &828307347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828307346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32c6c5685bf82df4f80f01e5702dc269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BtnSoundsOff: {fileID: 613604413}
+  BtnSoundsOn: {fileID: 333216692}
+--- !u!4 &828307348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828307346}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &881248138
 GameObject:
   m_ObjectHideFlags: 0
@@ -5965,6 +5951,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
+  - {fileID: 828307348}
   - {fileID: 1480791160}
   - {fileID: 1484249400}
   - {fileID: 190417840}
